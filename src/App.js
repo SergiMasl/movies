@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Navbar from "./components/nav/Navbar";
 const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -49,46 +50,6 @@ const tempWatchedData = [
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
-
-function Navbar() {
-  return (
-    <nav className="nav-bar">
-      <LogoNav />
-      <SearchNav />
-      <SearchResalts />
-    </nav>
-  );
-}
-function LogoNav() {
-  return (
-    <div className="logo">
-      <span role="img">🍿</span>
-      <h1>usePopcorn</h1>
-    </div>
-  );
-}
-function SearchNav() {
-  const [query, setQuery] = useState("");
-
-  return (
-    <input
-      className="search"
-      type="text"
-      placeholder="Search movies..."
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
-    />
-  );
-}
-
-function SearchResalts() {
-  return (
-    <p className="num-results">
-      Found <strong>X</strong> results
-      {/* {movies.length} */}
-    </p>
-  );
-}
 
 function Main() {
   return (
