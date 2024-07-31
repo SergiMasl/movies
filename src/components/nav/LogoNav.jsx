@@ -2,7 +2,7 @@ function LogoNav() {
   return (
     <div className="logo">
       <span role="img">🍿</span>
-      <h1>usePopcorn</h1>
+      <h1>Movies</h1>
     </div>
   );
 }

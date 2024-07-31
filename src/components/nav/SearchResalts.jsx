@@ -1,8 +1,7 @@
-function SearchResalts() {
+function SearchResalts({ movies }) {
   return (
     <p className="num-results">
-      Found <strong>X</strong> results
-      {/* {movies.length} */}
+      Found <strong> {movies.length}</strong> results
     </p>
   );
 }

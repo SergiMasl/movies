@@ -1,15 +1,5 @@
-import LogoNav from "./LogoNav";
-import SearchNav from "./SearchNav";
-import SearchResalts from "./SearchResalts";
-
-function Navbar() {
-  return (
-    <nav className="nav-bar">
-      <LogoNav />
-      <SearchNav />
-      <SearchResalts />
-    </nav>
-  );
+function Navbar({ children }) {
+  return <nav className="nav-bar">{children}</nav>;
 }
 
 export default Navbar;
